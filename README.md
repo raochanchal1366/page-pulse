@@ -106,6 +106,12 @@ page-pulse
 - Backend performs all webpage parsing using Cheerio.
 - Error handling is implemented for invalid URLs and failed requests.
 
+## AI Usage
+
+I used ChatGPT and Claude as development assistants during this project. They helped me understand implementation approaches, debug issues, improve code structure, refine the UI, and write documentation.
+
+After using their suggestions, I manually integrated the code, reviewed the implementation, tested all features locally, fixed deployment issues, wrote and ran parser tests, and made project-specific improvements before deployment. I made sure I understood every part of the final solution.
+
 ## Future Improvements
 
 - Lighthouse integration
