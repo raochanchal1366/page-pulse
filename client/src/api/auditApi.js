@@ -1,7 +1,8 @@
-const API_URL = "https://page-pulse-api-sezj.onrender.com/api/audit";
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 export async function auditPage(url) {
-  const response = await fetch(API_URL, {
+  const response = await fetch(`${API_URL}/api/audit`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
