@@ -1,16 +1,121 @@
-# React + Vite
+# Page Pulse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Page Pulse is a web application that analyzes any webpage and generates a quick SEO and performance report.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Frontend:
+https://page-pulse-client.onrender.com
 
-## React Compiler
+Backend API:
+https://page-pulse-api-sezj.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Analyze any website URL
+- Fetch page title
+- Fetch meta description
+- HTTP status
+- Response time
+- H1 count
+- Images missing alt text
+- Approximate word count
+- Proper error handling
+- Responsive UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+- React
+- Vite
+- CSS
+
+### Backend
+- Node.js
+- Express
+- Axios
+- Cheerio
+
+## Installation
+
+### Clone repository
+
+```bash
+git clone https://github.com/raochanchal1366/page-pulse.git
+```
+
+### Install frontend
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+### Install backend
+
+```bash
+cd server
+npm install
+npm start
+```
+
+## API Endpoint
+
+POST
+
+```
+/api/audit
+```
+
+Request
+
+```json
+{
+  "url":"https://github.com"
+}
+```
+
+Response
+
+```json
+{
+  "title":"",
+  "metaDescription":"",
+  "status":200,
+  "responseTimeMs":450,
+  "h1Count":2,
+  "imagesMissingAlt":5,
+  "wordCount":1400
+}
+```
+
+## Project Structure
+
+```
+page-pulse
+│
+├── client
+├── server
+├── README.md
+```
+
+## Design Decisions
+
+- Used React components for better code organization.
+- Backend performs all webpage parsing using Cheerio.
+- Error handling is implemented for invalid URLs and failed requests.
+
+## Future Improvements
+
+- Lighthouse integration
+- Performance score
+- Open Graph analysis
+- Keyword density
+- Export report as PDF
+
+## Author
+
+Chanchal Rao
+
+Built for Digital Heroes Training Task.
