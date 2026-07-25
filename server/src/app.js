@@ -17,6 +17,14 @@ app.get("/health", (req, res) => {
   res.status(200).json({ status: "ok" });
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Page Pulse API is running 🚀",
+    endpoint: "/api/audit",
+    method: "POST",
+  });
+});
+
 app.use("/api", auditRouter);
 app.use(errorHandler);
 
