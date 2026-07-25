@@ -85,6 +85,11 @@ function App() {
       {report && !loading && (
         <ReportCard report={report} />
       )}
+      <footer className="footer">
+       Built for{" "}
+       <a href="https://digitalheroesco.com" target="_blank" rel="noreferrer">Digital Heroes Training Task
+       </a>
+       </footer>
     </div>
   );
 }
