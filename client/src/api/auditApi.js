@@ -1,5 +1,7 @@
+const API_URL = "https://page-pulse-api-sezj.onrender.com/api/audit";
+
 export async function auditPage(url) {
-  const response = await fetch("/api/audit", {
+  const response = await fetch(API_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -10,7 +12,7 @@ export async function auditPage(url) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "Failed to analyze page.");
+    throw new Error(data.message || "Something went wrong");
   }
 
   return data;
